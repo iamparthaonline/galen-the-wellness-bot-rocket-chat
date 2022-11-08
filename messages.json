@@ -1,0 +1,8 @@
+{
+    "default_message": {
+        "en": "Hi __userName__ 👋\n I am Galen, your personal wellness assistant ❤️‍🩹. \n Could you tell me what you're looking for today? \n \n 1️⃣ - Remind me to drink water💧\n 2️⃣ - I'm feeling stressed 😟\n 3️⃣ - Boost my productivity💪\n 4️⃣ - Nudge me to take breaks 🫶\n 5️⃣ - Help me take meds on time 💊\n 0️⃣ - Change language \n \n I'm waiting for your reply 😀"
+    },
+    "test": {
+        "en": "hia"
+    }
+}

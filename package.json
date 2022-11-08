@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "@rocket.chat/sdk": "^0.2.9-2",
@@ -13,5 +13,8 @@
     "dotenv": "^16.0.3"
   },
   "author": "Team Fasalians",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
