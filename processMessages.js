@@ -1,5 +1,14 @@
-const { default_message } = require("./messages.json");
-// Process messages
+const { defaultMessage } = require("./messages.json");
+const sendMessage = require("./lib/sendMessage");
+const handleTakeBreakRequest = require("./features/takeBreak");
+
+/**
+ *
+ * @param {Object} driver - SDK driver with bot context
+ * @param {Object} err - any errors that might have happened in message retrieval
+ * @param {Object} messageData - has all the data about the message received
+ * @param {Object} messageOptions - tells about the roomParticipant and roomType
+ */
 const processMessages = async (driver, err, messageData, messageOptions) => {
   if (!err) {
     const messageObject = {
@@ -21,18 +30,27 @@ const processMessages = async (driver, err, messageData, messageOptions) => {
     /**
      * We need to get user had changed language or not from DB - user settings
      */
-    const language = "en";
-    let replyMessage;
+    const userData = {
+      language: "en",
+    };
 
-    switch (message.toUpperCase()) {
-      case 1: {
+    const messageToBeProcessed = message.trim().toUpperCase();
+
+    switch (messageToBeProcessed) {
+      case "5️⃣":
+      case "5":
+      case 5: {
+        await handleTakeBreakRequest(driver, roomId, userData);
+        break;
       }
       default: {
-        replyMessage = default_message[language].replace("__userName__", name);
+        const replyMessage = defaultMessage[userData.language].replace(
+          "__userName__",
+          name
+        );
+        await sendMessage(driver, replyMessage, roomId, true, userData);
       }
     }
-
-    if (replyMessage) await driver.sendToRoomId(replyMessage, roomId);
   }
 };
 

@@ -10,7 +10,8 @@
   "dependencies": {
     "@rocket.chat/sdk": "^0.2.9-2",
     "axios": "^1.1.3",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "mongoose": "^6.7.2"
   },
   "author": "Team Fasalians",
   "license": "ISC",

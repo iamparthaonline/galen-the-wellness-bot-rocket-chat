@@ -1,8 +1,20 @@
+const mongoose = require("mongoose");
 require("dotenv").config();
 const { driver } = require("@rocket.chat/sdk");
 
-const { HOST, BOT_USER, BOT_PASSWORD, BOTNAME, SSL, ROOMS = [] } = process.env;
+const { HOST, BOT_USER, BOT_PASSWORD, BOTNAME, SSL } = process.env;
 const processMessages = require("./processMessages.js");
+
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error: "));
+db.once("open", function () {
+  console.log("Connected successfully");
+});
 
 // Bot configuration
 const runbot = async () => {
