@@ -1,0 +1,17 @@
+{
+  "name": "galen_bot",
+  "version": "1.0.0",
+  "description": "We will be building a bot, which will help all rocket.chat users with their mental and physical well-being along with helping with productiveness.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@rocket.chat/sdk": "^0.2.9-2",
+    "axios": "^1.1.3",
+    "dotenv": "^16.0.3"
+  },
+  "author": "Team Fasalians",
+  "license": "ISC"
+}
