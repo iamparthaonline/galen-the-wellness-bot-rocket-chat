@@ -15,7 +15,10 @@
         "en": "Oops! I don't really understand what you want 😕\nPlease try again 🙌"
     },
     "alreadyTakeBreakReminderRunningMessage": {
-        "en": "Hey __userName__, I am already reminding you every __interval__ hour for taking a break ✅\nI have reminded you 10 times in total 😇 \n6️⃣ - Stop the reminder"
+        "en": "Hey __userName__, I am already reminding you every __interval__ hour for taking a break ✅\nI have reminded you 10 times in total 😇 \n6️⃣ - Stop the reminder\n0️⃣ - Main Menu"
+    },
+    "takeBreakReminderStoppedMessage": {
+        "en": "Hey __userName__, I won't bug you now for taking a break 🙂\nIf you need me to remind you for breaks again, then you know where to find me 😇\n0️⃣ - Main Menu"
     }
 
 }

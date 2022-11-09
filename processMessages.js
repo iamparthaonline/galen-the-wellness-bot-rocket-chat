@@ -108,13 +108,17 @@ const processMessages = async (driver, err, messageData, messageOptions) => {
           isDefault = true;
         }
       }
-    } else if (lastMessageDetails.messageType === "TAKE_BREAK_MENU") {
+    } else if (
+      lastMessageDetails.messageType === "TAKE_BREAK_MENU" ||
+      lastMessageDetails.messageType === "TAKE_BREAK_REMINDER_STAT"
+    ) {
       /**Take Break Menu Navigation */
       isDefault = await handleTakeBreakRequest(
         driver,
         roomId,
         userData,
-        message.trim()
+        message.trim(),
+        lastMessageDetails.messageType
       );
       console.log("isDefault", isDefault);
     }

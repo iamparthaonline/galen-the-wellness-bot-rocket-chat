@@ -10,10 +10,17 @@ const {
   wrongInputMessage,
   alreadyTakeBreakReminderRunningMessage,
   takeBreakReminderCongratsMessage,
+  takeBreakReminderStoppedMessage,
 } = require("../../messages.json");
 const reminderModel = require("../../schema/Reminder");
 
-handleTakeBreakRequest = async (driver, roomId, userData, selectedInput) => {
+handleTakeBreakRequest = async (
+  driver,
+  roomId,
+  userData,
+  selectedInput,
+  lastMessageType
+) => {
   const { name, language, username } = userData;
 
   /** If user has selected Back to Main Menu option */
@@ -33,6 +40,23 @@ handleTakeBreakRequest = async (driver, roomId, userData, selectedInput) => {
     username: userData.username,
     reminderType: "TAKE_BREAK",
   });
+
+  if (lastMessageType === "TAKE_BREAK_REMINDER_STAT") {
+    if ([6, "6", "6️⃣"].indexOf(selectedInput) > -1) {
+      /**Stop the scheduler */
+      await sendMessage(
+        driver,
+        takeBreakReminderStoppedMessage[language],
+        roomId,
+        false,
+        userData,
+        "TAKE_BREAK_REMINDER_STOP"
+      );
+      return false;
+    } else if ([0, "0", "0️⃣"].indexOf(selectedInput) > -1) {
+      return true;
+    }
+  }
   if (activeReminderDetails) {
     /**
      * User already has take a break running
@@ -108,6 +132,7 @@ handleTakeBreakRequest = async (driver, roomId, userData, selectedInput) => {
             userData,
             "WRONG_INPUT"
           );
+          return false;
         }
       }
       console.log("intervalHour -=------ ", intervalHour);
@@ -119,7 +144,7 @@ handleTakeBreakRequest = async (driver, roomId, userData, selectedInput) => {
         username,
         reminderType: "TAKE_BREAK",
         remindAt: {
-          interval: 1,
+          interval: parseInt(selectedInput),
         },
         createdAt: new Date(),
         isActive: true,
