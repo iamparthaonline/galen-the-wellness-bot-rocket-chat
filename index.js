@@ -4,6 +4,7 @@ const { driver } = require("@rocket.chat/sdk");
 
 const { HOST, BOT_USER, BOT_PASSWORD, BOTNAME, SSL } = process.env;
 const processMessages = require("./processMessages.js");
+const taskScheduler = require("./lib/scheduler");
 
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
@@ -38,3 +39,4 @@ const runbot = async () => {
 };
 
 runbot();
+taskScheduler.start();
