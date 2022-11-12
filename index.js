@@ -31,8 +31,8 @@ const runbot = async () => {
   await driver.subscribeToMessages();
   console.log("Subscribed to rocket.chat".bold.bgYellow.black);
 
-  driver.reactToMessages((err, message, messageOptions) => {
-    if (message.u._id === botUserId) return;
+  driver.reactToMessages((err, message, { roomType }) => {
+    if (message.u._id === botUserId || roomType === "c") return;
     else {
       handleUserReplies(driver, err, message, messageOptions);
     }
