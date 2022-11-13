@@ -19,6 +19,9 @@
     },
     "takeBreakReminderStoppedMessage": {
         "en": "Hey __userName__, I won't bug you now for taking a break 🙂\nIf you need me to remind you for breaks again, then you know where to find me 😇\n0️⃣ - Main Menu"
+    },
+    "defaultFeelingLowMessage": {
+        "en": "Hi __userName__ 👋\n I am Galen, your personal wellness assistant ❤️‍🩹. \n Could you tell me what you're looking for today? \n \n 1️⃣ - Tell me a Quote💧\n 2️⃣ - Send me a gif 😟\n 3️⃣ - Send me a relaxing picture💪 \n4️⃣ - Tell Me a Joke \n \n I'm waiting for your reply 😀"
     }
 
 }
