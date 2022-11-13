@@ -19,6 +19,23 @@
     },
     "takeBreakReminderStoppedMessage": {
         "en": "Hey __userName__, I won't bug you now for taking a break 🙂\nIf you need me to remind you for breaks again, then you know where to find me 😇\n0️⃣ - Main Menu"
+    },
+    "medicineMainMenu": {
+        "en": "Want me to remind you about medicine timings ? \n 1 - Yes \n 0 - No, Take me to main menu"
+    },
+    "medicineMenuEnterHours": {
+        "en": "Please enter the hours in 24 hour format(0-23) seperated by comma.\n eg: 0,12,4,23"
+    },
+    "medicineMenuEnterHoursWrongInput": {
+        "en": "Sorry could not determine the timings, please try again."
+    },
+    "medicineReminderEnterHoursSuccess": {
+        "en": "You will be reminded \n 0 - main menu"
+    },
+    "medicineStopMenu": {
+        "en": "You are already being reminded to take medicine at __hours__ hours every day. \n1 - stop reminder.\n0 - main menu"
+    },
+    "medicineReminerStopSuccess": {
+        "en": "You have stopped your medicine reminders."
     }
-
 }
