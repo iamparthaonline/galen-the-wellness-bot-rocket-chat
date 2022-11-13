@@ -18,11 +18,16 @@ const ReminderSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    required: true,
+    default() {
+      return new Date();
+    },
   },
   isActive: {
     type: Boolean,
     required: true,
+  },
+  medicineReminderHours: {
+    type: [Number],
   },
 });
 
