@@ -19,6 +19,9 @@
     },
     "takeBreakReminderStoppedMessage": {
         "en": "Hey __userName__, I won't bug you now for taking a break 🙂\nIf you need me to remind you for breaks again, then you know where to find me 😇\n0️⃣ - Main Menu"
+    },
+    "takeBreakReminderMessage": {
+        "en": "Hey __userName__, Please take a break, catchup with your buddiess or have a walk. 🙂"
     }
 
 }
