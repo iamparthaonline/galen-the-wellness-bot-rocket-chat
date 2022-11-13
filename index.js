@@ -43,4 +43,4 @@ const runbot = async () => {
 };
 
 runbot();
-taskScheduler.start();
+// taskScheduler.start();
