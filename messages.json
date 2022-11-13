@@ -1,62 +1,65 @@
 {
-  "defaultMessage": {
-    "en": "Hi __userName__ 👋\n I am Galen, your personal wellness assistant ❤️‍🩹. \n Could you tell me what you're looking for today? \n \n 1️⃣ - Remind me to drink water💧\n 2️⃣ - I'm feeling stressed 😟\n 3️⃣ - Boost my productivity💪\n 4️⃣ - Nudge me to take breaks 🫶\n 5️⃣ - Help me take meds on time 💊\n 0️⃣ - Change language \n \n I'm waiting for your reply 😀"
-  },
-  "noInputMessage": {
-    "en": "Sorry ☹️ I didn't get any reply from you. Have a great day 🙌"
-  },
-  "takeBreakReminderFirstMessage": {
-    "en": "Taking breaks at work can:\n\n ✅ Help you reevaluate goals 🎯\n ✅ Increase productivity and help the mind refocus 🧠\n ✅ Lessen injuries, body aches, and pains 💪\n ✅ Improve creativity 🎨\n ✅ Reduce stress 🪷\n \n Please let me know on what intervals should I nudge you for breaks, \n\n1️⃣ - Every 1 Hour\n2️⃣ - Every 2 Hours\n3️⃣ - Every 3 Hours\n4️⃣ - Every 4 Hours\n0️⃣ - Main Menu"
-  },
-  "takeBreakReminderCongratsMessage": {
-    "en": "Great job __userName__ 🥳\nI will nudge you every __hours__ for a break."
-  },
-  "wrongInputMessage": {
-    "en": "Oops! I don't really understand what you want 😕\nPlease try again 🙌"
-  },
-  "alreadyTakeBreakReminderRunningMessage": {
-    "en": "Hey __userName__, I am already reminding you every __interval__ hour for taking a break ✅\nI have reminded you 10 times in total 😇 \n6️⃣ - Stop the reminder\n0️⃣ - Main Menu"
-  },
-  "takeBreakReminderStoppedMessage": {
-    "en": "Hey __userName__, I won't bug you now for taking a break 🙂\nIf you need me to remind you for breaks again, then you know where to find me 😇\n0️⃣ - Main Menu"
-  },
-  "defaultFeelingLowMessage": {
-    "en": " 1️⃣ - Tell Me a Quote🔆 \n 2️⃣ - Tell me a Joke 🤣🤣\n 3️⃣ - Send me a GIF 👋🏻 \n I'm waiting for your reply 😀"
-  },
-  "feelingLowSubMenuOptions": {
-    "en": " 1️⃣ - Send Another🔁 \n 2️⃣ - Go to options 📂\n 3️⃣ - Main Menu 📱 \n \n I'm waiting for your reply 😀"
-  },
-  "takeWaterBreakReminderFirstMessage": {
-    "en": "Are you sure you want me to remind you every hour to drink water? \n\n1️⃣ - Yes\n2️⃣ - Main Menu"
-  },
-  "takeWaterBreakReminderCongratsMessage": {
-    "en": "Great job __userName__ 🥳\nI will remind you every hour to drink water."
-  },
-  "alreadyTakeWaterReminderRunningMessage": {
-    "en": "Hey __userName__, I am already reminding you every hour to drink water ✅\nI have reminded you __count__ times in total 😇 \n6️⃣ - Stop the reminder\n0️⃣ - Main Menu"
-  },
-  "takeWaterReminderStoppedMessage": {
-    "en": "Hey __userName__, I won't bug you now to drink water 🙂\nIf you need me to remind you, then you know where to find me 😇\n0️⃣ - Main Menu"
-  },
-  "medicineMainMenu": {
-    "en": "Want me to remind you about medicine timings ? \n 1 - Yes \n 0 - No, Take me to main menu"
-  },
-  "medicineMenuEnterHours": {
-    "en": "Please enter the hours in 24 hour format(0-23) seperated by comma.\n eg: 0,12,4,23"
-  },
-  "medicineMenuEnterHoursWrongInput": {
-    "en": "Sorry could not determine the timings, please try again."
-  },
-  "medicineReminderEnterHoursSuccess": {
-    "en": "You will be reminded \n 0 - main menu"
-  },
-  "medicineStopMenu": {
-    "en": "You are already being reminded to take medicine at __hours__ hours every day. \n1 - stop reminder.\n0 - main menu"
-  },
-  "medicineReminerStopSuccess": {
-    "en": "You have stopped your medicine reminders."
-  },
-  "searchForContent": {
-    "en": "Hey __userName__, Please Enter the name of Topic That you are interested in ,  Like \n Meditation \n Fitness \n etc \n0️⃣ - Main Menu"
-  }
+    "defaultMessage": {
+        "en": "Hi __userName__ 👋\n I am Galen, your personal wellness assistant ❤️‍🩹. \n Could you tell me what you're looking for today? \n \n 1️⃣ - Remind me to drink water💧\n 2️⃣ - I'm feeling stressed 😟\n 3️⃣ - Boost my productivity💪\n 4️⃣ - Nudge me to take breaks 🫶\n 5️⃣ - Help me take meds on time 💊\n 0️⃣ - Change language \n \n I'm waiting for your reply 😀"
+    },
+    "noInputMessage": {
+        "en": "Sorry ☹️ I didn't get any reply from you. Have a great day 🙌"
+    },
+    "takeBreakReminderFirstMessage": {
+        "en": "Taking breaks at work can:\n\n ✅ Help you reevaluate goals 🎯\n ✅ Increase productivity and help the mind refocus 🧠\n ✅ Lessen injuries, body aches, and pains 💪\n ✅ Improve creativity 🎨\n ✅ Reduce stress 🪷\n \n Please let me know on what intervals should I nudge you for breaks, \n\n1️⃣ - Every 1 Hour\n2️⃣ - Every 2 Hours\n3️⃣ - Every 3 Hours\n4️⃣ - Every 4 Hours\n0️⃣ - Main Menu"
+    },
+    "takeBreakReminderCongratsMessage": {
+        "en": "Great job __userName__ 🥳\nI will nudge you every __hours__ for a break."
+    },
+    "wrongInputMessage": {
+        "en": "Oops! I don't really understand what you want 😕\nPlease try again 🙌"
+    },
+    "alreadyTakeBreakReminderRunningMessage": {
+        "en": "Hey __userName__, I am already reminding you every __interval__ hour for taking a break ✅\nI have reminded you 10 times in total 😇 \n6️⃣ - Stop the reminder\n0️⃣ - Main Menu"
+    },
+    "takeBreakReminderStoppedMessage": {
+        "en": "Hey __userName__, I won't bug you now for taking a break 🙂\nIf you need me to remind you for breaks again, then you know where to find me 😇\n0️⃣ - Main Menu"
+    },
+    "defaultFeelingLowMessage": {
+        "en": " 1️⃣ - Tell Me a Quote🔆 \n 2️⃣ - Tell me a Joke 🤣🤣\n 3️⃣ - Send me a GIF 👋🏻 \n I'm waiting for your reply 😀"
+    },
+    "feelingLowSubMenuOptions": {
+        "en": " 1️⃣ - Send Another🔁 \n 2️⃣ - Go to options 📂\n 3️⃣ - Main Menu 📱 \n \n I'm waiting for your reply 😀"
+    },
+    "takeWaterBreakReminderFirstMessage": {
+        "en": "Are you sure you want me to remind you every hour to drink water? \n\n1️⃣ - Yes\n2️⃣ - Main Menu"
+    },
+    "takeWaterBreakReminderCongratsMessage": {
+        "en": "Great job __userName__ 🥳\nI will remind you every hour to drink water."
+    },
+    "alreadyTakeWaterReminderRunningMessage": {
+        "en": "Hey __userName__, I am already reminding you every hour to drink water ✅\nI have reminded you __count__ times in total 😇 \n6️⃣ - Stop the reminder\n0️⃣ - Main Menu"
+    },
+    "takeWaterReminderStoppedMessage": {
+        "en": "Hey __userName__, I won't bug you now to drink water 🙂\nIf you need me to remind you, then you know where to find me 😇\n0️⃣ - Main Menu"
+    },
+    "medicineMainMenu": {
+        "en": "Want me to remind you about medicine timings ? \n 1 - Yes \n 0 - No, Take me to main menu"
+    },
+    "medicineMenuEnterHours": {
+        "en": "Please enter the hours in 24 hour format(0-23) seperated by comma.\n eg: 0,12,4,23"
+    },
+    "medicineMenuEnterHoursWrongInput": {
+        "en": "Sorry could not determine the timings, please try again."
+    },
+    "medicineReminderEnterHoursSuccess": {
+        "en": "You will be reminded \n 0 - main menu"
+    },
+    "medicineStopMenu": {
+        "en": "You are already being reminded to take medicine at __hours__ hours every day. \n1 - stop reminder.\n0 - main menu"
+    },
+    "medicineReminerStopSuccess": {
+        "en": "You have stopped your medicine reminders."
+    },
+    "searchForContent": {
+        "en": "Hey __userName__, Please Enter the name of Topic That you are interested in ,  Like \n Meditation \n Fitness \n etc \n0️⃣ - Main Menu"
+    },
+    "takeBreakReminderMessage": {
+        "en": "Hey __userName__, Please take a break, catchup with your buddiess or have a walk. 🙂"
+    }
 }
