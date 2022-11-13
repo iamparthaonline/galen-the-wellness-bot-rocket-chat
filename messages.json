@@ -26,6 +26,18 @@
     "feelingLowSubMenuOptions": {
         "en": " 1️⃣ - Send Another🔁 \n 2️⃣ - Go to options 📂\n 3️⃣ - Main Menu 📱 \n \n I'm waiting for your reply 😀"
     },
+    "takeWaterBreakReminderFirstMessage": {
+        "en": "Are you sure you want me to remind you every hour to drink water? \n\n1️⃣ - Yes\n2️⃣ - Main Menu"
+    },
+    "takeWaterBreakReminderCongratsMessage": {
+        "en": "Great job __userName__ 🥳\nI will remind you every hour to drink water."
+    },
+    "alreadyTakeWaterReminderRunningMessage": {
+        "en": "Hey __userName__, I am already reminding you every hour to drink water ✅\nI have reminded you __count__ times in total 😇 \n6️⃣ - Stop the reminder\n0️⃣ - Main Menu"
+    },
+    "takeWaterReminderStoppedMessage": {
+        "en": "Hey __userName__, I won't bug you now to drink water 🙂\nIf you need me to remind you, then you know where to find me 😇\n0️⃣ - Main Menu"
+    },
     "medicineMainMenu": {
         "en": "Want me to remind you about medicine timings ? \n 1 - Yes \n 0 - No, Take me to main menu"
     },
