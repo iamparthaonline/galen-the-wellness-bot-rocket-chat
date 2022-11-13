@@ -1,6 +1,6 @@
 {
   "defaultMessage": {
-    "en": "Hi __userName__ 👋\n I am Galen, your personal wellness assistant ❤️‍🩹. \n Could you tell me what you're looking for today? \n \n 1️⃣ - Remind me to drink water💧\n 2️⃣ - I'm feeling stressed 😟\n 3️⃣ - Search for the articles📰\n 4️⃣ - Nudge me to take breaks 🫶\n 5️⃣ - Help me take meds on time 💊\n 0️⃣ - Change language \n \n I'm waiting for your reply 😀"
+    "en": "Hi __userName__ 👋\n I am Galen, your personal wellness assistant ❤️‍🩹. \n Could you tell me what you're looking for today? \n \n 1️⃣ - Remind me to drink water💧\n 2️⃣ - I'm feeling stressed 😟\n 3️⃣ - Boost my productivity💪\n 4️⃣ - Nudge me to take breaks 🫶\n 5️⃣ - Help me take meds on time 💊\n 0️⃣ - Change language \n \n I'm waiting for your reply 😀"
   },
   "noInputMessage": {
     "en": "Sorry ☹️ I didn't get any reply from you. Have a great day 🙌"
@@ -19,6 +19,24 @@
   },
   "takeBreakReminderStoppedMessage": {
     "en": "Hey __userName__, I won't bug you now for taking a break 🙂\nIf you need me to remind you for breaks again, then you know where to find me 😇\n0️⃣ - Main Menu"
+  },
+  "medicineMainMenu": {
+    "en": "Want me to remind you about medicine timings ? \n 1 - Yes \n 0 - No, Take me to main menu"
+  },
+  "medicineMenuEnterHours": {
+    "en": "Please enter the hours in 24 hour format(0-23) seperated by comma.\n eg: 0,12,4,23"
+  },
+  "medicineMenuEnterHoursWrongInput": {
+    "en": "Sorry could not determine the timings, please try again."
+  },
+  "medicineReminderEnterHoursSuccess": {
+    "en": "You will be reminded \n 0 - main menu"
+  },
+  "medicineStopMenu": {
+    "en": "You are already being reminded to take medicine at __hours__ hours every day. \n1 - stop reminder.\n0 - main menu"
+  },
+  "medicineReminerStopSuccess": {
+    "en": "You have stopped your medicine reminders."
   },
   "searchForContent": {
     "en": "Hey __userName__, Please Enter the name of Topic That you are interested in ,  Like \n Meditation \n Fitness \n etc \n0️⃣ - Main Menu"
