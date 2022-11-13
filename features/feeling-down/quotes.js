@@ -1,4 +1,8 @@
-[
+const {
+  feelingLowSubMenuOptions,
+} = require("../../messages.json");
+
+const quotes = [
   {
     "text": "Genius is one percent inspiration and ninety-nine percent perspiration.",
     "author": "Thomas Edison"
@@ -22836,3 +22840,13 @@
     "author": "Tom Jackson"
   }
 ]
+
+const getAQuote = function(language,name){
+  const len = quotes.length
+  const num = Math.floor(Math.random() * len);
+  const Quote = quotes[num]
+
+  const msg = `Quote : ${Quote.text} \n \t\t\t\t ${Quote.author}` + '\n\n' + feelingLowSubMenuOptions[language]
+  return msg
+}
+module.exports = getAQuote;

@@ -5,10 +5,16 @@
       ( walking, star gazing, doing small talk, etc ) - 
  */
 const sendMessage = require("../../lib/sendMessage");
+const getAQuote = require("./quotes")
+const getAJoke = require("./jokes")
+const getAGif = require("./gif")
 const {
   defaultFeelingLowMessage,
-} = require("./messages.json");
+  feelingLowSubMenuOptions
+} = require("../../messages.json");
 const reminderModel = require("../../schema/Reminder");
+
+const FEELING_LOW_STATES = {"FEELING_LOW_QUOTE":["1️⃣",1,"1"],"FEELING_LOW_JOKE":["2️⃣",2,"2"],"FEELING_LOW_GIF":["3️⃣",3,"3"]}
 
 handleFeelingLowRequest = async (
   driver,
@@ -26,15 +32,22 @@ handleFeelingLowRequest = async (
   ) {
     return true;
   }
-
+  if(Object.keys(FEELING_LOW_STATES).includes(lastMessageType) ){
+    if(selectedInput == 1){
+      selectedInput  = FEELING_LOW_STATES[lastMessageType][0]
+    }
+    if(selectedInput == 2){
+      selectedInput  = undefined
+    }
+  }
   if (selectedInput) {
     switch (selectedInput) {
       case "1️⃣":
-      case "1":
-      case 1: {
+        case "1":
+          case 1: {
         await sendMessage(
           driver,
-          "Quote",
+          getAQuote(language,name),
           roomId,
           true,
           userData,
@@ -47,7 +60,21 @@ handleFeelingLowRequest = async (
       case 2: {
         await sendMessage(
           driver,
-          "GIF",
+          getAJoke(language,name),
+          roomId,
+          true,
+          userData,
+          "FEELING_LOW_JOKE"
+        );
+        break;
+      }
+      case "3️⃣":
+      case "3":
+      case 3: {
+        // const message = await getAGif()
+        await sendMessage(
+          driver,
+          await getAGif(language,name),
           roomId,
           true,
           userData,
@@ -55,33 +82,6 @@ handleFeelingLowRequest = async (
         );
         break;
       }
-      case "3️⃣":
-      case "3":
-      case 3: {
-        await sendMessage(
-          driver,
-          "PIC",
-          roomId,
-          true,
-          userData,
-          "FEELING_LOW_PICTURE"
-        );
-        break;
-      }
-
-      case "4️⃣":
-        case "4":
-        case 4: {
-          await sendMessage(
-            driver,
-            "Joke",
-            roomId,
-            true,
-            userData,
-            "FEELING_LOW_JOKE"
-          );
-          break;
-        }
     }
   }
 
