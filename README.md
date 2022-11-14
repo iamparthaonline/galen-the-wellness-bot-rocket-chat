@@ -32,9 +32,36 @@ We are building a bot, which will help all rocket.chat users with their mental a
 
 ## Installation
 
-Install Node JS in your system first.
+### Setup the system
+
+- Install Node JS in your system first.
+- Create a new account in your workspace for the bot
+- Create API Tokens for the bot
+- Create a Local/Server Mongo Instance to save your message data
+
+### Update the .env config
 
 Update the config in the .env file.
+
+```javascript
+HOST = "YOUR_WORKSPACE_ID.rocket.chat"
+BOT_USER = "YOUR_BOT_USERNAME"
+BOT_PASSWORD = "YOUR_BOT_PASSWORD"
+BOTNAME = "YOUR_BOT_USERNAME"
+SSL = true
+RESPOND_TO_DM=true
+LISTEN_ON_ALL_PUBLIC=true
+MONGO_URL="MONGO_DB_URL"
+MESSAGE_TIMEOUT=10000
+CRON_TIME="10 * * * * *" #*/1 * * * *
+AUTH_TOKEN="YOUR_BOT_SPECIFIC_AUTH_TOKEN"
+AUTH_USER_ID="YOUR_BOT_SPECIFIC_AUTH_USER_ID"
+API_URL="https://YOUR_WORKSPACE_ID.rocket.chat/api/v1/chat.postMessage"
+CONTENT_SOURCE_URL="https://www.health.com"
+
+```
+
+### Run the bot server
 
 Then run below commands,
 
