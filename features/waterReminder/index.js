@@ -66,7 +66,6 @@ handleWaterBreakRequest = async (
         userData,
         "TAKE_WATER_BREAK_REMINDER_STAT"
       );
-      return true;
     } else if (["2️⃣", "2", 2].includes(selectedInput.trim())) {
       return true;
     }
@@ -85,7 +84,6 @@ handleWaterBreakRequest = async (
         userData,
         "TAKE_WATER_BREAK_REMINDER_STOPPED"
       );
-      return true;
     } else if (["0️⃣", "0", 0].includes(selectedInput.trim())) {
       return true;
     }
