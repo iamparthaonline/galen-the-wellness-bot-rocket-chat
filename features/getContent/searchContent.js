@@ -17,7 +17,6 @@ showSearchWithContentTitle = async (
     return true;
   }
   if (selectedInput) {
-    console.log(selectedInput, "GetUserInput");
     await getContent(driver, roomId, userData, selectedInput);
   } else {
     const searchContentMessage = searchForContent[language].replace(

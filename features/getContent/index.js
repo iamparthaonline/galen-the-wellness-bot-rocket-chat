@@ -36,7 +36,6 @@ doSomethingWith = async (
   userData
 ) => {
   if (url === contentSourceUrl) {
-    console.log(content.length, "COntent Lendth");
     if (content.length > 0) {
       await sendMessage(
         driver,

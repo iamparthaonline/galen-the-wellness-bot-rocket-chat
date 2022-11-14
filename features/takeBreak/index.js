@@ -5,14 +5,9 @@
       ( walking, star gazing, doing small talk, etc ) - 
  */
 const sendMessage = require("../../lib/sendMessage");
-const {
-  takeBreakReminderFirstMessage,
-  wrongInputMessage,
-  alreadyTakeBreakReminderRunningMessage,
-  takeBreakReminderCongratsMessage,
-  takeBreakReminderStoppedMessage,
-} = require("../../messages.json");
+const constructMessage = require("../../lib/constructMessage");
 const reminderModel = require("../../schema/Reminder");
+const messageModel = require("../../schema/Message");
 
 handleTakeBreakRequest = async (
   driver,
@@ -44,9 +39,14 @@ handleTakeBreakRequest = async (
   if (lastMessageType === "TAKE_BREAK_REMINDER_STAT") {
     if ([6, "6", "6️⃣"].indexOf(selectedInput) > -1) {
       /**Stop the scheduler */
+      await activeReminderDetails.updateOne({ isActive: false });
+
       await sendMessage(
         driver,
-        takeBreakReminderStoppedMessage[language],
+        constructMessage("takeBreakReminderStoppedMessage", {
+          userName: userData.name,
+          hours: parseInt(selectedInput),
+        }),
         roomId,
         false,
         userData,
@@ -64,24 +64,17 @@ handleTakeBreakRequest = async (
      * Show him how many times he has taken a break
      * Give options of "Ok, Cool" | "Stop the reminder"
      */
-    console.log(
-      "alreadyTakeBreakReminderRunningMessage",
-      alreadyTakeBreakReminderRunningMessage,
-      language
-    );
-    let alreadyTakeBreakReminderRunningMessageLabel =
-      alreadyTakeBreakReminderRunningMessage[language].replace(
-        "__userName__",
-        name
-      );
-    alreadyTakeBreakReminderRunningMessageLabel =
-      alreadyTakeBreakReminderRunningMessageLabel.replace(
-        "__interval__",
-        activeReminderDetails.remindAt.interval
-      );
+    const count = await messageModel
+      .find({ roomId, messageType: "TAKE_A_BREAK_REMINDER" })
+      .count();
+
     await sendMessage(
       driver,
-      alreadyTakeBreakReminderRunningMessageLabel,
+      constructMessage("alreadyTakeBreakReminderRunningMessage", {
+        userName: userData.name,
+        interval: activeReminderDetails.remindAt.interval,
+        count: `${count}`,
+      }),
       roomId,
       false,
       userData,
@@ -123,10 +116,9 @@ handleTakeBreakRequest = async (
           break;
         }
         default: {
-          const wrongMessage = wrongInputMessage[userData.language];
           await sendMessage(
             driver,
-            wrongMessage,
+            constructMessage("wrongInputMessage"),
             roomId,
             true,
             userData,
@@ -135,7 +127,7 @@ handleTakeBreakRequest = async (
           return false;
         }
       }
-      console.log("intervalHour -=------ ", intervalHour);
+
       /**
        * Store the reminder details in DB
        */
@@ -151,22 +143,23 @@ handleTakeBreakRequest = async (
       };
       const reminderToBeSaved = new reminderModel(breakReminderData);
       await reminderToBeSaved.save();
-      const takeBreakCongoMessage = takeBreakReminderCongratsMessage[language];
       await sendMessage(
         driver,
-        takeBreakCongoMessage,
+        constructMessage("takeBreakReminderCongratsMessage", {
+          userName: userData.name,
+          hours: parseInt(selectedInput),
+        }),
         roomId,
         false,
         userData,
         "TAKE_BREAK_MENU"
       );
     } else {
-      const takeBreakMenuMessage = takeBreakReminderFirstMessage[
-        language
-      ].replace("__userName__", name);
       await sendMessage(
         driver,
-        takeBreakMenuMessage,
+        constructMessage("takeBreakMenuMessage", {
+          userName: userData.name,
+        }),
         roomId,
         true,
         userData,
